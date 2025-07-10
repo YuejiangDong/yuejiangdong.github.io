@@ -1,0 +1,6 @@
+{% assign intern_page = site.pages | where: "permalink", "/internship/" | first %}
+{% if intern_page %}
+  <div class="internship">
+    {{ intern_page.content | markdownify }}
+  </div>
+{% endif %}

@@ -159,3 +159,33 @@ html[data-theme-setting="light"] {
     display: block;
   }
 }
+
+.author-self {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  // 悬停效果
+  transition: color 0.3s ease, transform 0.2s ease;
+  &:hover {
+    color: var(--global-hover-color);
+    transform: scale(1.1);
+  }
+}
+
+.email-icon {
+  // 使用主题色
+  color: var(--global-theme-color);
+  
+  // 添加动画效果
+  transition: color 0.3s ease, transform 0.2s ease;
+  
+  // 悬停效果
+  &:hover {
+    color: var(--global-hover-color);
+    transform: scale(1.1);
+  }
+  
+  // 确保在深色模式有足够对比度
+  @at-root html[data-theme="dark"] & {
+    filter: brightness(1.2);
+  }
+}

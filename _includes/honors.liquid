@@ -1,0 +1,6 @@
+{% assign honors_page = site.pages | where: "permalink", "/honors/" | first %}
+{% if honors_page %}
+  <div class="honors">
+    {{ honors_page.content | markdownify }}
+  </div>
+{% endif %}
